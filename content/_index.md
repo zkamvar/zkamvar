@@ -2,19 +2,19 @@
 action_label: Read More &rarr;
 action_link: /about
 action_type: text
-description: Sit down, relax, and get to know Hugo Apéro. Built on top of Blogophonic,
-  we wanted to create a polished Hugo theme with the right features for a true personal
-  website. We set out to create a theme that is a pleasure to learn, and one that
-  helps others get to know you better. It is more than a blog, with flexible custom
-  layouts that help you introduce yourself online.
-image_left: true
+description: I have been developing R packages in the realms of population
+  genetics, epidemiology, reproducible research, and publication since 2012.
+  I enjoy cats, baking, mushroom hunting, bad horror movies, and good
+  speculative fiction.
+image_left: false
 images:
-- img/revoir.jpg
+- img/mushie-smol.jpg
 show_action_link: true
 show_social_links: true
-subtitle: A Hugo theme you'll want to hang out with
+subtitle: |
+  Lesson Infrastructure Technology Developer @ The Carpentries
 text_align_left: false
-title: Hugo Apéro
+title: Zhian N. Kamvar
 type: home
 ---
 

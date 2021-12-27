@@ -3,10 +3,15 @@
 text_align_right: false
 show_title_as_headline: false
 headline: |
-  Hi, my name is Hugo Apéro. Nice to meet you.
+  Zhian N. Kamvar, Ph. D.
 ---
 
-<!-- this is a subheadline -->
-I'm a Hugo theme you'll want to hang out with. :fr: 
+I am the Lesson Infrastructure Technology Developer at [The
+Carpentries](https://carpentries.org/) working to make the Lesson
+Infrastructure a more accessible and friendly place to contribute. I’m trained
+in the [population genetics of clonal plant
+pathogens](https://grunwaldlab.github.io/poppr/) and have a strong passion for
+creating user-friendly and sensible computational tools in R.
 
-The page you are reading is based on a markdown file- look in `content/about/` to edit. There, look inside the `header`, `main`, and `sidebar` folders to get started building your own "about" page.
+This site serves as my personal site where I can blog about various subjects
+including R programming, reproducible science, and population genetics.
