@@ -1,0 +1,78 @@
+---
+title: 'Poppr 2.6.0: Better Network Plotting'
+author: Zhian N. Kamvar
+date: '2018-01-11'
+slug: poppr-2-6-0-better-network-plotting
+categories:
+  - R
+  - example
+tags:
+  - CRAN
+  - poppr
+  - R
+banner: img/banners/msn.png
+---
+
+
+Poppr version 2.6.0 has [officially been released on
+CRAN](https://cran.r-project.org/package=poppr) and should be built for all
+operating systems within the next few days `r emo::ji("tada")`. You can check
+out the [NEWS] for full details. This release features a new function called
+[`boot.ia()`] to assess how the [Index of Association] responds to repeat
+observations (clones). Perhaps the biggest feature is the change in how minimum
+spanning networks are plotted.
+
+Minimum spanning networks were originally implemented in poppr by Javier Tabima
+and I, and since then they've gone through some tweaking, eventually including
+features like reticulation of equivalent paths and a GUI to help construct these
+networks.
+
+There were two problems, however:
+
+1. Nodes were scaled by radius instead of area
+2. There was no legend for node sizes
+
+Plotting by radius was especially problematic because they [exaggerate
+differences between
+groups](http://coolinfographics.com/blog/2014/8/29/false-visualizations-sizing-circles-in-infographics.html).
+Here's an example of a network that was plotted with the previous version of
+poppr:
+
+```{r orig-plot, echo = FALSE, message = FALSE}
+suppressPackageStartupMessages({
+  library("poppr")
+  library("igraph")
+})
+data(Aeut)
+amsn <- poppr.msn(Aeut, diss.dist(Aeut), vertex.label = NA, include.ties = TRUE, showplot = FALSE)
+set.seed(2018-01-08)
+plot(amsn$graph, vertex.size = (V(amsn$graph)$size ^ 2) * 3)
+graphics::legend(-1.55, 1, bty = "n", cex = 0.75, 
+      legend = popNames(Aeut), title = "Populations", title.adj = 0, 
+      fill = topo.colors(2), border = NULL)
+```
+
+And here's that same network plotted with the current version:
+
+```{r msn_demo}
+library("poppr")
+data(Aeut)
+
+# Basic plot
+set.seed(2018-01-08)
+amsn <- poppr.msn(Aeut, diss.dist(Aeut), include.ties = TRUE)
+
+# with scale bar
+set.seed(2018-01-08)
+plot_poppr_msn(Aeut,
+               amsn,
+               inds = "none", # don't show any labels 
+               nodelab = 100 # don't label the sizes of nodes
+               )
+```
+
+
+
+[`boot.ia()`]: https://grunwaldlab.github.io/poppr/reference/boot.ia.html
+[Index of Association]: https://grunwaldlab.github.io/poppr/reference/ia.html#details
+[NEWS]: https://grunwaldlab.github.io/poppr/news/index.html#poppr-2-6-0

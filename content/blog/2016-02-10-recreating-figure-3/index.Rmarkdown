@@ -1,0 +1,177 @@
+---
+title: Recreating Figure 3
+author: Zhian N. Kamvar
+date: '2016-02-10'
+slug: recreating-figure-3
+categories:
+  - R
+  - example
+tags:
+  - poppr
+  - multilocus genotype
+  - ggplot2
+banner: img/banners/fig3.png
+---
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(fig.height = 15, fig.width = 5, out.width = "50%", 
+                      fig.align = "center", dpi = 150)
+```
+
+Motivation
+==========
+
+In February of 2016, I got an email asking if I could provide the code to
+recreate [figure three][fig3] from my [article in Phytopathology][sod] on the
+outbreak of *Phytophthora ramorum* in Curry County OR from 2001 to 2014
+(paywalled, but [you can find a copy here][sod-free]).
+
+While I have the [code used for the analysis on github][analysis], it's a lot of
+stuff to sort through, considering that it was my first foray in attempting a
+reproducible analysis, so for this post, I'm going to recreate it using current
+tools.
+
+I created figure three originally in two parts with ggplot2 and then manually
+aligned the two figures in inkscape. Since then, the package cowplot has come
+around and made this process easier. I have my old code up here:
+[mlg_distribution.Rmd][mlgdist], and since the packages have changed since then,
+I'm redoing the code here.
+
+Analysis
+========
+
+## Loading Packages/Data
+
+```{r package_loading}
+library("poppr")    # Note, v.2.2.0 or greater is needed for the %>% operator
+library("ggplot2")  # Plotting
+library("cowplot")  # Grouping the plots
+```
+
+The data from the paper has been stored in *poppr* as "Pram", but it includes 
+nursery data. I'm removing it here.
+
+```{r data_loading}
+data("Pram")
+mll(Pram) <- "original"
+Pram
+
+ramdat <- Pram %>%
+  setPop(~SOURCE) %>%               # Set population strata to SOURCE (forest/nursery)
+  popsub(blacklist = "Nursery") %>% # remove the nursery derived samples
+  setPop(~YEAR)                     # Set the strata to YEAR of epidemic
+
+# A color palette (unnecessary)
+ncolors <- max(mll(ramdat))
+myPal   <- setNames(funky(ncolors), paste0("MLG.", seq(ncolors)))
+```
+
+Creating the Barplot
+--------------------
+
+The barplot is a barplot of the MLG counts ordered from most abundant to least
+abundant.
+
+```{r barplot}
+
+# This obtains a table of sorted MLG counts for adjusting the axes.
+mlg_order <- table(mll(ramdat)) %>% 
+  sort() %>% 
+  data.frame(MLG = paste0("MLG.", names(.)), Count = unclass(.))
+
+# Creating the bar plot
+bars <- ggplot(mlg_order, aes(x = MLG, y = Count, fill = MLG)) + 
+  geom_bar(stat = "identity") +
+  theme_classic() +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 180)) +
+  scale_fill_manual(values = myPal) +
+  geom_text(aes(label = Count), size = 2.5, hjust = 0, fontface = "bold") +
+  theme(axis.text.y = element_blank()) + 
+  theme(axis.ticks.y = element_blank()) +
+  theme(legend.position = "none") +
+  theme(text = element_text(family = "Helvetica")) +
+  theme(axis.title.y = element_blank()) +
+  # From the documentation for theme: top, right, bottom, left
+  theme(plot.margin = unit(c(1, 1, 1, 0), "lines")) + 
+  scale_x_discrete(limits = mlg_order$MLG) +
+  coord_flip()
+
+bars
+```
+
+Creating the Subway plot
+------------------------
+
+This plot displays the MLGs occurring across years. It's a nice graphical way of
+displaying the results of `mlg.crosspop()` when the populations are years.
+
+```{r subwayplot}
+
+mlg_range <- mlg.crosspop(ramdat, mlgsub = unique(mll(ramdat)), 
+                          df = TRUE, quiet = TRUE)
+names(mlg_range)[2] <- "Year"
+
+# Creating the subway plot
+ranges <- ggplot(mlg_range, aes(x = Year, y = MLG, group = MLG, color = MLG)) + 
+  geom_line(size = 1, linetype = 1) + 
+  geom_point(size = 5, pch = 21, fill = "white") +
+  geom_text(aes(label = Count), color = "black", size = 2.5) + 
+  scale_color_manual(values = myPal) + 
+  ylab("Multilocus Genotype") +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +
+  theme(text = element_text(family = "Helvetica")) +
+  theme(legend.position = "none") +
+  theme(axis.line = element_line(colour = "black")) +
+  # From the documentation for theme: top, right, bottom, left
+  theme(plot.margin = unit(c(1, 0, 1, 1), "lines")) +
+  scale_y_discrete(limits = mlg_order$MLG)
+
+ranges
+```
+
+> **A word on margins**
+> 
+> Cowplot is nice for placing the ggplot objects next to each other in one
+> frame, but it likes to give them room to spread out. To get the plots as close
+> together as possible, I'm cutting out the left and right margins of the
+> barplot and subway plot, respectively. This is done with the `plot.margin`
+> argument to `theme()` which organizes the widths as **top**, **right**,
+> **bottom**, **left**.
+
+
+Aligning with cowplot
+---------------------
+
+Cowplot's `plot_grid()` will fit these two plots together. Originally, I had to 
+export these plots and align them by hand in inkscape, but now, they can be 
+plotted together and aligned in one swoop. There's some fiddling to be done with
+the margins, but it might be easier to export it as an svg, and then slide one
+over to the other in 2 minutes in inkscape.
+
+
+```{r cowplot}
+cowplot::plot_grid(ranges, bars, align = "h", rel_widths = c(2.5, 1))
+```
+
+Conclusion
+==========
+
+This plot was done when I was originally toying with the idea of keeping my
+analysis open. Of course, I know more things now than I did then, but I do enjoy
+the fact that I can go back a year later and recreate the exact plot from start
+to finish.
+
+Session Information
+===================
+
+```{r session_info}
+options(width = 100)
+devtools::session_info()
+```
+[fig3]: https://www.researchgate.net/publication/278039693_Spatial_and_Temporal_Analysis_of_Populations_of_the_Sudden_Oak_Death_Pathogen_in_Oregon_Forests/figures
+[sod]: http://apsjournals.apsnet.org/doi/10.1094/PHYTO-12-14-0350-FI
+[sod-free]: https://www.researchgate.net/publication/278039693_Spatial_and_Temporal_Analysis_of_Populations_of_the_Sudden_Oak_Death_Pathogen_in_Oregon_Forests
+[analysis]: https://github.com/zkamvar/Sudden_Oak_Death_in_Oregon_Forests#readme
+[mlgdist]: https://github.com/zkamvar/Sudden_Oak_Death_in_Oregon_Forests/blob/master/mlg_distribution.Rmd
