@@ -71,7 +71,7 @@ docker run --rm -dp 8787:8787 zkamvar/sclerotinia-366:latest
 Once the hash shows up, you can go to your browser and type `localhost:8787` and an Rstudio window will open (if you’re presented with a login screen, login with user: rstudio, pass: rstudio):
 
 <figure>
-<img src="../../img/docker-rstudio1.png" style="width:100.0%" alt="Rstudio startup" /><figcaption aria-hidden="true">Rstudio startup</figcaption>
+<img src="img/docker-rstudio1.png" style="width:100.0%" alt="Rstudio startup" /><figcaption aria-hidden="true">Rstudio startup</figcaption>
 </figure>
 
 The analysis is in the `/analysis` directory, but since that’s not writable, you should copy it to the home directory.
@@ -90,12 +90,12 @@ If you type <kbd>CTRL + .</kbd>, you can navigate to `mlg-mcg.Rmd`, where you ca
 re-execute all of the code by selecting “Run All” from the Run drop-down:
 
 <figure>
-<img src="../../img/docker-rstudio2.png" style="width:100.0%" alt="Run all" /><figcaption aria-hidden="true">Run all</figcaption>
+<img src="img/docker-rstudio2.png" style="width:100.0%" alt="Run all" /><figcaption aria-hidden="true">Run all</figcaption>
 </figure>
 
 Once everything runs, you have all the data from that Rmarkdown document to inspect and manipulate.
 
-<img src="../../img/docker-rstudio3.png" style="width:100.0%" />
+<img src="img/docker-rstudio3.png" style="width:100.0%" />
 
 You can even copy the analysis to your computer while the image is running:
 

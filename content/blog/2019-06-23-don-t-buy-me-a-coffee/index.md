@@ -51,7 +51,7 @@ bucks to buy me a coffee or a beer. What is more up my alley is the concept of
 of sending monetary support to the author (the [vim] text editor is a well-known
 example of this).
 
-<img align="center" title="vim intro screen showing a link to donate to ICCF" src="../../img/vim-intro.png" width="75%">
+<img align="center" title="vim intro screen showing a link to donate to ICCF" src="img/vim-intro.png" width="75%">
 
 So, that being said, **if you use poppr, and you want to support it's
 development, then please donate to the Refugee and Immigrant Center for

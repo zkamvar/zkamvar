@@ -45,7 +45,7 @@ library path](https://stackoverflow.com/q/15170399/2752888) 🙀.
 
 # What if I told you there was a better way?
 
-![](../../img/banners/smashing-library.gif)
+![](img/banners/smashing-library.gif)
 
 The solution to avoid the hassle of constant library migration is to make a custom library folder[^0] and set the environmental variable 
 `R_LIBS` to point to that folder 👍. 

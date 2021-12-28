@@ -17,7 +17,7 @@ banner: img/banners/Halyomorpha_halys_lab.jpg
 ---
 
 <figure>
-<img width="50%" src="../../img/banners/Halyomorpha_halys_lab.jpg" alt="A Brown marmorated stink bug female from a laboratory colony on a common bean leaf, photographed in the laboratory of Fondazione Edmund Mach, Italy." longdesc = "https://commons.wikimedia.org/wiki/File:Halyomorpha_halys_lab.jpg" />
+<img width="50%" src="img/banners/Halyomorpha_halys_lab.jpg" alt="A Brown marmorated stink bug female from a laboratory colony on a common bean leaf, photographed in the laboratory of Fondazione Edmund Mach, Italy." longdesc = "https://commons.wikimedia.org/wiki/File:Halyomorpha_halys_lab.jpg" />
 <figcaption width="75%">
 A Brown marmorated stink bug female from a laboratory colony on a common bean leaf, photographed in the laboratory of Fondazione Edmund Mach, Italy.<br>
 URL: https://commons.wikimedia.org/wiki/File:Halyomorpha_halys_lab.jpg

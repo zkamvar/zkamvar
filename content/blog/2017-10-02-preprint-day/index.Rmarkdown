@@ -86,7 +86,7 @@ docker run --rm -dp 8787:8787 zkamvar/sclerotinia-366:latest
 
 Once the hash shows up, you can go to your browser and type `localhost:8787` and an Rstudio window will open (if you're presented with a login screen, login with user: rstudio, pass: rstudio):
 
-![Rstudio startup](../../img/docker-rstudio1.png){width=100%}
+![Rstudio startup](img/docker-rstudio1.png){width=100%}
 
 The analysis is in the `/analysis` directory, but since that's not writable, you should copy it to the home directory.
 In Rstudio type:
@@ -104,11 +104,11 @@ Now, you can navigate to the RMD documents in `doc/RMD` or the manuscript in `do
 If you type <kbd>CTRL + .</kbd>, you can navigate to `mlg-mcg.Rmd`, where you can
 re-execute all of the code by selecting "Run All" from the Run drop-down:
 
-![Run all](../../img/docker-rstudio2.png){width=100%}
+![Run all](img/docker-rstudio2.png){width=100%}
 
 Once everything runs, you have all the data from that Rmarkdown document to inspect and manipulate.
 
-![](../../img/docker-rstudio3.png){width=100%}
+![](img/docker-rstudio3.png){width=100%}
 
 You can even copy the analysis to your computer while the image is running:
 

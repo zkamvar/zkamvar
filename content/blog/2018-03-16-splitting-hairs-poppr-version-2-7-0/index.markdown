@@ -30,7 +30,7 @@ distance [(Bruvo et al. 2004)](http://onlinelibrary.wiley.com/doi/10.1111/j.1365
 I had noticed a pattern that I thought could have been caused by an old bug (that has [since been fixed](../squish/index.html)) and emailed Dr. Meirmans. 
 
 <figure>
-<img src="../../img/meirmans-bruvo.png" alt="Four scatterplots showing the effect of parameter choice on Bruvo's distance. The combined model (top left, default) was the one shown in Meirmans, Liu, and Tienderen 2018. Small arrows for each point represent the difference between the old model and new model." />
+<img src="img/meirmans-bruvo.png" alt="Four scatterplots showing the effect of parameter choice on Bruvo's distance. The combined model (top left, default) was the one shown in Meirmans, Liu, and Tienderen 2018. Small arrows for each point represent the difference between the old model and new model." />
 <figcaption>
 Four scatterplots showing the effect of parameter choice on Bruvo's distance. The combined model (top left, default) was the one shown in Meirmans, Liu, and Tienderen 2018. Small arrows for each point represent the difference between the old model and new model.
 </figcaption>
