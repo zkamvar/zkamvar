@@ -1,5 +1,5 @@
 ---
-author: Alison Hill
+author: [Alison Hill, Hallison Ill]
 categories:
 - workshop
 date: "2021-01-12"
