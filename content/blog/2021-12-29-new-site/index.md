@@ -12,6 +12,7 @@ subtitle: 'Pray that I do not alter it further'
 excerpt: 'Friendship ended with Academic, now Apéro is my best friend'
 draft: false
 series: ~
+sharing_image: featured.jpg
 layout: single
 ---
 

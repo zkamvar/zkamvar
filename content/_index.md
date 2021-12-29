@@ -9,6 +9,7 @@ description: I have been developing R packages in the realms of population
 image_left: false
 images:
 - img/mushie-smol.jpg
+sharing_image: "/img/mushie-smol.jpg"
 show_action_link: true
 show_social_links: true
 subtitle: |
