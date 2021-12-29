@@ -10,7 +10,7 @@ tags:
   - misc
 subtitle: 'Pray that I do not alter it further'
 excerpt: 'Friendship ended with Academic, now Apéro is my best friend'
-draft: yes
+draft: false
 series: ~
 layout: single
 ---
