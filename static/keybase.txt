@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/zkamvar
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://zkamvar.netlify.app
+  * I am zkamvar (https://keybase.io/zkamvar) on keybase.
+  * I have a public key ASA2iH4xNgf0Qap87xYYW1Za1T1pBZ2zU4GO3-X6Rm97Sgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120ea55ca385e6dc3e4cd757242eb62013d5f2aa51c5c40eccc2a5accc9c56be6480a",
+      "host": "keybase.io",
+      "kid": "012036887e313607f441aa7cef16185b565ad53d69059db353818edfe5fa466f7b4a0a",
+      "uid": "d6a5678f4a32861d34ab5e87d12c6319",
+      "username": "zkamvar"
+    },
+    "merkle_root": {
+      "ctime": 1640892010,
+      "hash": "a6a045cef4662999845238a02bc63f059363f2c270c89a72bd2ba34e2f731d02ec62b85dd54a3a84d3dbb981bffd5a51e358d994357e7deef8ab1eafe1a987ca",
+      "hash_meta": "c171a339a30fcd8dbbdb6e144a79fe299112a3e830ac58a7989eb86837ec8748",
+      "seqno": 21533701
+    },
+    "service": {
+      "entropy": "Gty9jLidb9MiHLmuv6Tu0dNG",
+      "hostname": "zkamvar.netlify.app",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.9.0"
+  },
+  "ctime": 1640892032,
+  "expire_in": 504576000,
+  "prev": "a8704683de412900a6f264d2722f8cbe5ce181d384c6d518fa71b5c23cecdb82",
+  "seqno": 44,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgNoh+MTYH9EGqfO8WGFtWWtU9aQWds1OBjt/l+kZve0oKp3BheWxvYWTESpcCLMQgqHBGg95BKQCm8mTSci+MvlzhgdOExtUY+nG1wjzs24LEICDlwMdtPL8f0oxTPWJ1emPR8fHdXhkALyCIilV4RNWcAgHCo3NpZ8RAO7ctKa/nQhb58JayBZWLdjuHrnF+mc8yUX49tns87/oduj5yhioXm0nAKAGHXoeQjPbbabBa4QidawHhnlLZDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIACgLHpK2SuRUmzicnQh0AyohcxTAxlQ/b/nVX10JBhJo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/zkamvar
+
+==================================================================
