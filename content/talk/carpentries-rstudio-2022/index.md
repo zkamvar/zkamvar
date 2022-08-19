@@ -35,6 +35,20 @@ links:
   url: https://github.com/carpentries/varnish/
 ---
 
+<figure style='text-align: center;'>
+<a
+href="https://www.rstudio.com/conference/2022/talks/building-accessible-lessons-r-friends/?wvideo=ssot3tfv28"><img
+src="https://embed-ssl.wistia.com/deliveries/54b54f1c2e48547f0d80c552d066d676d5c91ea4.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=001483e0"
+alt="video player screenshot of a slide that shows a tweet on a pale yellow background with a blue play button superimposed."></a>
+<figcaption>
+(Video opens in new window)
+<br>
+<a
+href="https://www.rstudio.com/conference/2022/talks/building-accessible-lessons-r-friends/?wvideo=ssot3tfv28">rstudio::conf
+2022 Talks - Building Accessible Lessons with R and Friends - RStudio</a>
+</figcaption>
+</figure>
+
 The Carpentries is a global community of volunteers who collaboratively develop
 and deliver lessons to build capacity in data and coding skills to researchers
 worldwide. In the recent redesign of our lesson infrastructure (serving >100
