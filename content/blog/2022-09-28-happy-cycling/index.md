@@ -6,7 +6,6 @@ slug: happy-cycling
 subtitle: 'Thoughts on professional development and carreer growth'
 layout: single
 series: ~
-draft: yes
 categories:
   - thoughts
 tags:
@@ -18,6 +17,9 @@ editor_options:
     wrap: 80
 ---
 
+**Heads up:** This blog post is _long_ and rambling at times. I am mostly
+writing this for myself; others may find its content of limited use. This will
+be your only warning.
 
 If you asked me five years ago in Lincoln, Nebraska what I would be doing in
 five years, I would not have been able to give you a good answer beyond either
@@ -162,7 +164,7 @@ leave behind causes no more than a gentle rocking of my colleagues' proverbial
 canoes?
 
 [^4]: This is *purely hypothetical* at this point. I have absolutely no
-    intention of leaving this job.
+    intention of leaving this job :sweat_smile:
 
 Recently, my new supervisor (Kari L. Jordan) suggested that I start thinking
 about my career trajectory regardless of whether it is inside or outside The
@@ -190,13 +192,21 @@ skills and practical skills[^5].
 
 ### Technical Skills
 
-In terms of technical skills, I am an avid Linux user, an expert in R,
+In terms of technical skills, I am an avid Linux user, an expert in R[^exp],
 proficient in python, I can hack around in JavaScript, XSLT, BASH, Make, and [I
 know enough C to be dangerous](../i-c-bugs/). I also am proficient in creating
 GitHub actions workflows. Note that this is not an exhaustive list, but it gets
 at some of the skills I bring to the table in day-to-day operations.
 
-Now, let's think about the skills that I wish I had.
+Now, let's think about the skills that I wish I had. And note, this is
+definitely not an exhaustive list.
+
+[^exp]: R is not my first programming language (:wave: PERL), but it is certainly
+      the one I am fluent in. After working in R for ten years with several
+      packages on CRAN, having given several trainings, talks, and publications,
+      I think I can call myself an expert without hubris.
+
+#### Security :lock:
 
 First and foremost: I wish I understood security better. Especially in a world
 where I'm making it easier for people to deploy lessons using The Workbench
@@ -210,6 +220,8 @@ accidentally exposing information in workflows[^6].
     valid for the Workbench lessons: the last line of defense is still the
     maintainers.
 
+#### Cloud Services :cloud:
+
 Moreover, I want to get better at understanding how to work with cloud services
 like AWS and DigitalOcean. When I was in my final year of grad school,
 Beatrice---a computer scientist I knew through our Grad Worker Union---gave me
@@ -221,12 +233,31 @@ competent enough in AWS that I'm *pretty sure* I won't break anything if I need
 to create or delete an S3 bucket, but training to understand how it works and
 all the features it offers would be better.
 
+#### Native Application Development / Strongly-Typed Languages :crab:
+
 One thing that has always eluded me is how to create standalone applications,
 either through web applications, a command line interface, or a native desktop
 application. I do not at the moment know how to create something that can be
 built and deployed for Mac, Windows, and Linux without going through an
 established program/language like R. Working with languages like TypeScript and
-Rust would help me achieve this.
+Rust would help me achieve this. As a treat, I could also begin to start
+understanding WASM, because that seems to be the wave of the future.
+
+#### Web Development: Frontend, Web Content Accessibility, and Offline Applications :art:
+
+I know some of the basics of how HTML, CSS, and JavaScript work and I am
+passingly familiar with the [WCAG 2.1 guidelines][wcag], but my strength in
+those areas are definitely lacking. Part of the design of The Workbench is that
+we wanted to avoid relying on complex JavaScript manipulation that could prevent
+usage of the page if JavaScript is not enabled ([*a la* distill, which uses JS
+to render custom HTML tags][distill]), so a consulting company was hired to
+template the CSS, JS, and HTML from the Figma designs with the "minimal JS"
+specification. It works well, but now I have to maintain it :cold_sweat:.
+
+[wcag]: https://www.w3.org/WAI/standards-guidelines/wcag/
+[distill]: https://rstudio.github.io/distill/
+
+#### Moving Forward
 
 Ultimately, if The Carpentries disappeared tomorrow, I'm fairly certain I would
 be able to get a job without any advancement in the above skills, but having
@@ -234,18 +265,39 @@ these would make sure that I can avoid becoming "the R guy" in a world that has
 been taken over by [rustacians](https://www.rustaceans.org/) swimming in a
 Digital Ocean.
 
+So, how do I get there and how does this fit in with the broader goals for 
+Curriculum and Infrastructure? Well, all of these things are definitely within
+the realm of professional development as they will definitely help enhance my CV.
+They are not mission-critical, but having these skills would definitely
+strengthen my skill set. Importantly, I believe that all of these are achievable
+in the next five years as professional development goals, and all of these have
+some form of certification component that can go along with them. The next 
+question is now what is the rough timeline for the next five years?
+
+ - 2023-09: Frontend Certification
+ - 2024-09: WCAG 2.x certification
+ - 2025-09: Certified in AWS S3 and EC2 administration
+ - 2026-09: Rust development at the point where I can create CLI applictions
+ - 2027-09: Understand and Deploy WASM R applications
+ 
+Maybe this is ambitious and maybe my priorities are not exactly in the right
+area, but I think this gives me good goals for what I should have in the next
+five years. 
+
 ### Practical Skills
 
 In terms of practical skills, I am patient, experienced in evidence-based
 teaching, practice empathetic listening and non-violent communication, I am good
 at solving problems, and I am an effective communicator[^7].
 
-[^7]: lol not through this thousand plus word post!
+[^7]: lol not through this three-thousand word post :joy:!
 
 Now here's the easy thing: I like public speaking, but I find that I get cold
 feet when it comes to applying for speaking gigs. The solution is literally for
 me to just apply and see what happens. The hard thing is literally everything
 else.
+
+#### Project Planning and Administration 
 
 Project planning is like kryptonite to me. I know the value of project planning,
 but for some reason, I get hella bogged down when I'm trying to figure out how
@@ -256,6 +308,8 @@ ostensibly is project planning, but when it comes down to it, I have a hard time
 translating *feels* into practical values. I think this is partially because I
 often drill down into the details and get hung up when I hit one (1) unknown.
 
+#### Grant Writing and Administration
+
 Related to project planning is grant writing and grant management. I feel
 uncomfortable asking for a travel grant let alone a grant that would provide a
 year's worth of my salary. That being said, I know this is the most effective
@@ -263,22 +317,41 @@ way for a non-profit to get funded and I know it requires strong sales skills
 and strong project planning skills to actually get funded and deliver on the
 deliverables.
 
-<!--
-- Zhian’s time.
-  - Project about to be released
-  - How do I see my role expanding or moving forward.
-  - Role critical to mission. 
-  - Way our curriculum is expanding, we need developer to focus on lesson infrastructure. 
-  - Should have more time to think about future ideas.
-  - Think about job: what have you done and accomplished. Erin will do review of
-  JD to make sure they still make sense. Think about where you see your future
-  with The Carpentries.
-    - Kari does not anticipate that everyone will work for The Carpentries forever
-    - Think about growth; run project? Grant writing? Anything else that can help build CV.
-    - Think about challenges with Infrastructure and Curriculum team in light of personal skills and interests. 
-    - Once we release The Workbench, what’s next
-    - Write these ideas in a way that Kari can advocate
--->
+
+#### Moving Forward
+
+Kari has already indicated that I should be looking at at least two talks per
+year, and applying for talks is a good use of my time there. But how do I
+accomplish the goals of Project Planning/Management and Grant Writing and
+Administration? Well, the good thing is that I am _already doing these things_. 
+The goal is just that I need more practice doing these things and that they end
+up feeding into each other. So, how do I map these onto concrete goals for the
+next five years? One way is to come up with a plan for projects that I can
+plan for and help apply for funding in the next five years, but I'm going to
+need to stew on this a bit more :thinking:. 
+
+
+## Happy Cycling :city_sunrise: :bicycle:
+
+The title of this post comes from the [final track from the Boards of Canada
+album Music Has The Right To
+Children](https://boardsofcanada.bandcamp.com/track/happy-cycling). 
+
+When I was in grad school, I lived several miles away in a separate town, so I
+ended up riding my bike for a half an hour to get to and from work. During these
+bicycle rides, I rode mainly on bicycle trails that passed through vast fields 
+and I had a lot of time to think. On one of these bicycle rides, I was trying to
+wrap my head around how to solve a problem with recursion in poppr. It was at
+the end of a long stretch of trail that the solution popped into my head.
+
+I think about this a lot when I get frustrated with my work. Sometimes, we need
+to step back from what we are doing and spin other wheels so that we don't end
+up spinning our wheels. It also illustrates yet another metaphor: When I got to
+that point in the trail, I realised that I had no memory of the mile or so that
+I had previously ridden to get there. It makes me realize that when we are
+moving along doing something that comes so natural to us, we run on auto pilot
+and that's the point at which we need to step back and bring in some new 
+challenges.
 
 <!--
 - Zhian’s time.
