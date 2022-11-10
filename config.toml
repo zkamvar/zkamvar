@@ -90,6 +90,10 @@ enableEmoji = true
       icon_pack = "fab"
       url       = "https://github.com/zkamvar/zkamvar"
   [[params.social]]
+      icon      = "mastodon" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://fosstodon.org/@zkamvar"
+  [[params.social]]
       icon      = "twitter" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://twitter.com/zkamvar"
