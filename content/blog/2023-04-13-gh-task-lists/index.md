@@ -9,18 +9,22 @@ categories:
   - example
 tags:
   - tinkr
+  - XML
+  - XPath
   - GitHub
   - misc
   - R
 subtitle: ''
 excerpt: ''
-draft: yes
+draft: false
 series: ~
 layout: single
 ---
 
 Oh hey! It's been a while. I have but a moment, but I wanted to share something
-cool. 
+cool. The GitHub API does not parse task lists in issues, but I found a way to
+leverage the {tinkr} package (authored by Maëlle Salmon and myself) to parse out
+the tasklists with the power of XPath!
 
 I have a big project where I need to track [a bunch of task lists in GitHub 
 issues](https://github.com/carpentries/lesson-transition/labels/lesson). The
