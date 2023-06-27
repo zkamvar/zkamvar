@@ -6,7 +6,7 @@ headline: |
   Zhian N. Kamvar, Ph. D.
 ---
 
-I am the Lesson Infrastructure Technology Developer at [The
+I am the Lesson Infrastructure Developer at [The
 Carpentries](https://carpentries.org/) working to make the Lesson
 Infrastructure a more accessible and friendly place to contribute. I’m trained
 in the [population genetics of clonal plant
