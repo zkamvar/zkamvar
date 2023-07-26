@@ -1,5 +1,5 @@
 ---
-title: Using the R-universe to supplement CRAN
+title: My life with the r-universe
 author: Zhian N. Kamvar
 date: '2023-07-26'
 slug: r-universe-and-cran
@@ -14,8 +14,11 @@ tags:
   - packages
   - installation
   - rOpenSci
-subtitle: ''
-excerpt: ''
+subtitle: >
+  Using the r-universe to rapidly deploy releases, dependencies, and bugfixes
+excerpt: >
+  It's very hard to overstate just how much benefit the r-universe provides to
+  the R community.
 draft: yes
 series: ~
 layout: single
@@ -31,7 +34,7 @@ designing [The Carpentries Workbench](https://carpentries.github.io/workbench),
 I needed to make sure that people could reliably install R packages at _any
 time_ regardless of whether or not they had a compiler set up. 
 
-I use a hybrid model of the R-universe and CRAN to host
+I use a hybrid model of the r-universe and CRAN to host
 in-development packages that are not on CRAN alongside their dependencies that
 are released to CRAN, but also require compilation via their latest release tag
 on GitHub. This provides end users with **a repository that will always contain
@@ -40,19 +43,19 @@ without the need of a compiler.**
 
 In this blog post, I will provide a summary of the following:
 
-1. What is The R-universe and how to set one up
+1. What is The r-universe and how to set one up
 2. How to host your own in-development packages
 3. How to use it as an extension of CRAN to provide just-in-time binaries for
    your dependencies
 4. How to use it to provide the latest bugfix versions of critical dependencies
    _before_ they hit CRAN
 
-## What is the R-universe?
+## What is the r-universe?
 
-[The R-universe](https://ropensci.org/r-universe/) is a project by rOpenSci that
+[The r-universe](https://ropensci.org/r-universe/) is a project by rOpenSci that
 serves as a rolling development repository to host R packages that are in 
 development on a git repository such as GitHub. This has a few benefits from the
-get-go. With the R-universe, you can: 
+get-go. With the r-universe, you can: 
 
  1. host packages that could never be on CRAN due to size restrictions
  2. provide binary versions of packages that require compilation
@@ -72,7 +75,7 @@ and anyone can install those packages.
 
 ## Rolling your own {#dev-cran}
 
-Before the R-universe, there were three ways to provide users with your in-development version of a package:
+Before the r-universe, there were three ways to provide users with your in-development version of a package:
 
 1. have people install from GitHub via `remotes::install_github("user/repo")` or `pak::pkg_install("user/repo")`
 2. provide a {drat} repository (I've [posted about auto-building a drat repository previously](/blog/gh-drat/))
@@ -129,7 +132,7 @@ or a CRAN archive, it will use that version, and if it does not find that
 version there, it will install from the r-universe if the SHA hash matches the
 package DESCRIPTION, and then from the GitHub hash if it does not match.
 
-We had initially put up our packages on the R-universe because it was a good way
+We had initially put up our packages on the r-universe because it was a good way
 to distribute them without taxing the user's GitHub API calls, but there were 
 some issues to hosting only our packages. Imagine that you are a macOS or
 Windows user and you find that a new-to-you package has just updated on CRAN.
@@ -155,13 +158,13 @@ package that is newly released to CRAN.
 ![image of the available downloads for the {httpuv} package showing half of the binary versions at 1.6.5 and the other half at 1.6.4](httpuv-cran-2022-01-06.png)
 
 So the question is, if your depends on packages that require a complex setup to install the source version, how do you prevent this situation from happening?
-**How can the R-universe provide just-in-time binaries of released versions of
+**How can the r-universe provide just-in-time binaries of released versions of
 packages _that you do not control_**?
 
 ### Solution
 
 You can add the development version of this package to your `packages.json` file
-and _set the branch to `*release`_ so that it will rebuild on the R-universe
+and _set the branch to `*release`_ so that it will rebuild on the r-universe
 only when the author generates a release.
 
 ```json
@@ -177,7 +180,7 @@ only when the author generates a release.
 Because the r-universe will build package binaries within an hour, if someone
 attempts to install a package that was _just_ released to CRAN, they will not
 see the dialoge above, because R will detect that a binary is available from
-your R-universe.
+your r-universe.
 
 
 There are some caveats with this however:
@@ -213,7 +216,7 @@ I added **the specific bugfix tag/commit**[^commit] from {renv} to my `packages.
 
 [^commit]: I could have also specified `"branch": "fd9181395e13652d2b3dc942ac1bf807e9564c25"`
 
-When users installed {renv} from The Carpentries R-universe, they would get
+When users installed {renv} from The Carpentries r-universe, they would get
 version 0.17.0-38 until Kevin pushed the bugfix to CRAN. Note that Kevin was
 very diligent about bumping the development version number and adding a tag to
 every fix, but this would still work as long as the developer used _any form of
@@ -234,7 +237,7 @@ package against the packages that it uses and uses it regularly to make sure
 that they are all compatible with each other. The downside of having such a
 thorough system for checking packages is that the barrier for entry is very
 high[^cran]. It also means that providing bugfixes can be on the order of days.
-The R-universe solves these problems by providing a way for authors and
+The r-universe solves these problems by providing a way for authors and
 organisations to quickly deploy package suites and dependencies without
 burdening the users with the task of compiling code or installing extra
 packages.
@@ -256,13 +259,13 @@ My question to you: how do you think that went over? If the answer is: it was a
 success, then you are correct! But there is a big caveat to this success: it was
 only because I had asked each of the >40 participants to email me the results of
 their installation and then I would troubleshoot these installations via email
-several weeks before the workshop. **If the R-universe had existed back then**,
+several weeks before the workshop. **If the r-universe had existed back then**,
 I would have been able to tell people to (1) install R and (2) run
 `install.packages("poppr", repos = c("https://zkamvar.r-universe.dev",
 getOptions("repos")))` without having them to wonder why they needed a C
 compiler (or what it was) and why they needed {devtools}. 
 
-It's very hard to overstate just how much benefit the R-universe provides to the
+It's very hard to overstate just how much benefit the r-universe provides to the
 R community. It allows developers to rapidly deploy testing versions of their
 packages to their user-base for feedback, and it is one of the main reasons that
 we are able to easily maintain [The Carpentries
