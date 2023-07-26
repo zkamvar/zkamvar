@@ -81,11 +81,11 @@ Before the R-universe, there were three ways to provide users with your in-devel
    
 All of these solutions either required an extra package and syntax for your
 users (option 1) or it involved extra work on your end to build and provide
-updates for the packages on your server. And unless you happen to have access to
+updates for the packages on your server (options 2 and 3). Unless you happen to have access to
 a Linux, Windows, and MacOS machine, you are only able to serve the source
 version of the packages. 
 
-The R universe changes all of that by allowing us to specify that we want to
+**The R universe changes all of that** by allowing us to specify that we want to
 deploy releases in our JSON file: 
 
 ```json
@@ -226,37 +226,51 @@ latest version of a package and install that if a binary is available.
 
 ## Conclusion
 
-### Grace for my past self
-
-When I was a grad student, I wrote my very first R package,
-[{poppr}](https://grunwaldlab.github.io/poppr), which I had released to CRAN
-on 2013-05-26. In 2014, we released the paper describing {poppr} and were
-preparing to give [our first
-workshop](https://grunwaldlab.github.io/Population_Genetics_in_R/) for plant
-pathologists at the annual American Phytopathological Meeting. The only catch: I
-was working on a new version that would introduce many new features that we
-wanted to highlight in our workshop. To get people prepared, I had them install
-R, install a C compiler, install {devtools}, and then use
-`devtools::install_github("grunwaldlab/poppr@candidate-1.1")`.
-
-My question to you: how do you think that went over? If the answer is: it was a
-success, then you are correct! But there is a big caveat to this success: it was
-only because I had asked each of the >40 participants to email me the results of
-their installation and then I would troubleshoot these installations via email
-several weeks before the workshop. If the R-universe had existed back then, I
-would have been able to tell people to install R and run `install.packages("poppr",
-repos = c("https://zkamvar.r-universe.dev", getOptions("repos")))` without
-having them to wonder why they needed a C compiler (or what it was) and why they
-needed {devtools}.
-
 ### Benefits for the R Community
 
 One of the best features of R is a packaging ecosystem that, for the most part,
 "just works." This is largely thanks to CRAN and its volunteers who check every
 package against the packages that it uses and uses it regularly to make sure
 that they are all compatible with each other. The downside of having such a
-thorough system for checking packages is that the barrier for entry is very high[^cran]. It also means that providing bugfixes can be on the order of days. 
-The R-universe solves these problems by providing a way for authors and organisations to quickly deploy package suites and dependencies without burdening the users with the task of compiling code or installing extra packages.
+thorough system for checking packages is that the barrier for entry is very
+high[^cran]. It also means that providing bugfixes can be on the order of days.
+The R-universe solves these problems by providing a way for authors and
+organisations to quickly deploy package suites and dependencies without
+burdening the users with the task of compiling code or installing extra
+packages.
+
+### Grace for my past self
+
+When I was a grad student, I wrote my very first R package,
+[{poppr}](https://grunwaldlab.github.io/poppr), which I had released to CRAN on
+2013-05-26. In 2014, we released the paper describing {poppr} and were preparing
+to give [our first
+workshop](https://grunwaldlab.github.io/Population_Genetics_in_R/) for plant
+pathologists at the annual American Phytopathological Meeting. The only catch: I
+was working on a new version that would introduce many new features that we
+wanted to highlight in our workshop. To get people prepared, I had them to (1)
+install R, (2) install a C compiler, (2) install {devtools}, and then (4) use
+`devtools::install_github("grunwaldlab/poppr@candidate-1.1")`.
+
+My question to you: how do you think that went over? If the answer is: it was a
+success, then you are correct! But there is a big caveat to this success: it was
+only because I had asked each of the >40 participants to email me the results of
+their installation and then I would troubleshoot these installations via email
+several weeks before the workshop. **If the R-universe had existed back then**,
+I would have been able to tell people to (1) install R and (2) run
+`install.packages("poppr", repos = c("https://zkamvar.r-universe.dev",
+getOptions("repos")))` without having them to wonder why they needed a C
+compiler (or what it was) and why they needed {devtools}. 
+
+It's very hard to overstate just how much benefit the R-universe provides to the
+R community. It allows developers to rapidly deploy testing versions of their
+packages to their user-base for feedback, and it is one of the main reasons that
+we are able to easily maintain [The Carpentries
+Workbench](https://carpentries.github.io/workbench). And there are many other
+benefits that I haven't even mentioned here such as public APIs to get system
+dependencies, lightweight HTML manuals, articles, and more! So, thank you to
+rOpenSci for providing and continuing to support this work.
+
 
 [^cran]: This goes beyond the requirements to pass R CMD Check into gatekeeping
   behaviour from the CRAN maintainers and seemingly arbitrary policies that are
