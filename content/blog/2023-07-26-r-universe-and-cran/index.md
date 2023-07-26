@@ -19,7 +19,6 @@ subtitle: >
 excerpt: >
   It's very hard to overstate just how much benefit the r-universe provides to
   the R community.
-draft: yes
 series: ~
 layout: single
 ---
