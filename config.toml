@@ -92,7 +92,7 @@ enableEmoji = true
   [[params.social]]
       icon      = "mastodon" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://fosstodon.org/@zkamvar"
+      url       = "https://hachyderm.io/@zkamvar"
   [[params.social]]
       icon      = "twitter" # icon name without the 'fa-'
       icon_pack = "fab"
