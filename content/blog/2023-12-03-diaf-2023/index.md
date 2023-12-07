@@ -14,7 +14,7 @@ tags:
   - family
 subtitle: 'Why I am no longer looking for a new job right now'
 excerpt: 'If this year could stop with all of the destroying things I love, that would be super.'
-draft: yes
+draft: no
 series: ~
 layout: single
 ---
@@ -131,4 +131,5 @@ newfound grief](https://hachyderm.io/@zkamvar/111539698805457917).
 
 As I write this, I know that everything will be okay in the end, but it's going
 to take time to heal from the constant deluge of psychic damage I've taken this
-year.
+year. To those who have made it this far, I promise that my next post will not
+be such a downer. 
