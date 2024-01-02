@@ -1,7 +1,7 @@
 ---
 ## Configure sidebar content in narrow column
 author: "Zhian N. Kamvar"
-role: "Lesson Infrastructure Technology Developer"
+role: "Research Software Engineer"
 avatar_shape: circle # circle, square, rounded, leave blank to exclude
 show_social_links: true # specify social accounts in site config
 audio_link_label: "How to say my name" # leave blank to exclude

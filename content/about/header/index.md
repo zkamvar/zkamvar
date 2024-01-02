@@ -6,10 +6,11 @@ headline: |
   Zhian N. Kamvar, Ph. D.
 ---
 
-I am the Lesson Infrastructure Developer at [The
-Carpentries](https://carpentries.org/) working to make the Lesson
-Infrastructure a more accessible and friendly place to contribute. I’m trained
-in the [population genetics of clonal plant
+I am a Research Software Engineer on sabbatical, improving my craft,
+contributing to rOpenSci and the R project, and learning Korean. I am the former
+Lesson Infrastructure Developer at [The Carpentries](https://carpentries.org/)
+and worked to make the Lesson Infrastructure a more accessible and friendly
+place to contribute. I’m trained in the [population genetics of clonal plant
 pathogens](https://grunwaldlab.github.io/poppr/) and have a strong passion for
 creating user-friendly and sensible computational tools in R.
 
