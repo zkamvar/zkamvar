@@ -18,26 +18,31 @@ series: ~
 layout: single
 ---
 
-[This year has been a difficult one, and I am taking a
-sabbatical](/blog/diaf-2023/) to help myself recover, but I wanted to do one
-final writeup of a year in review to highlight both my accomplishments and
-personal successes in what has been an otherwise turbulent year. In short: professionally, I 
-[seamlessly transitioned an entire community to use a publishing system which I
+This is a long-ish post and it can be rambly, but it's something I would rather
+not edit too heavily, so here's a summary: [This year has been a difficult one,
+and I am taking a sabbatical](/blog/diaf-2023/) to help myself recover, but I
+wanted to do one final writeup of a year in review to highlight both my
+accomplishments and personal successes in what has been an otherwise turbulent
+year. In short: professionally, I [seamlessly transitioned an entire community
+to use a publishing system which I
 designed](https://carpentries.org/blog/2023/06/lesson-infrastructure-updates/),
 orchestrated a handoff of a large project (spanning 4 R packages, 1 set of
 GitHub Actions, integration testing, and pages upon pages of documentation),
 trained three novice R users in R package development, created [draft developer
 documentation (the _why_ and
-_how_)](https://carpentries.github.io/workbench-dev/); personally, I baked more,
-rode my bicycle a lot more (joining in on
+_how_)](https://carpentries.github.io/workbench-dev/); personally, I baked
+more, rode my bicycle a lot more (joining in on
 [PedalPalooza](https://www.pedalpalooza.org/) and [Ride
 Westside](https://www.beavertonvalleytimes.com/news/washington_county/better-biking-in-washington-county-its-these-riders-dream/article_7a355517-9beb-5eed-9ac2-98260011ef63.html)),
 I read over 40 books, and I tried my hand at [Kitchen
 Lithography](https://www.youtube.com/watch?v=UuBUlEt6vWw).
 
-I do not yet know what will be in store for me for 2024, but I know that I'm
-going to start off by refining my craft by contributing more to rOpenSci and the
-R project, learning Rust, and learning Korean.
+I do not yet know what will be in store for me for 2024, but I have found myself
+in a fortunate enough situation to be able to take a step back. I'm going to
+start off by refining my craft by contributing more to rOpenSci and the R
+project, getting better at C, learning Rust, and getting better at Korean. When
+I start looking for work in March, I hope that I can find a place where I can
+stay connected with the R community. 
 
 The next few sections go through, quarter by quarter, the books I read, work 
 accomplishments, and life events. 
@@ -177,7 +182,7 @@ I finished 10 books between July and September
  | N.K. Jemisin | The Killing Moon | 4.5 | July | |
  | Maria Adelmann | How To Be Eaten | 3.5 | July | Book club: we enjoyed it for the most part |
  | Toni Morrison | Song of Solomon: A Novel | 5 | August | |
- | Richard Brautigan | Trout Fishing in America / The Pill vs the Springhill Mine Disaster / In Watermelon Sugar | 5 | My rating is of In Watermelon Sugar. I read the others, but that's the one I was focussed on |
+ | Richard Brautigan | Trout Fishing in America / The Pill vs the Springhill Mine Disaster / In Watermelon Sugar | 5 | August | My rating is of In Watermelon Sugar. I read the others, but that's the one I was focussed on |
  | Stephen King | The Shining | 4.5 | August | re-read from decades ago |
  | Marcia Douglas | The Marvellous Equations of the Dread: A Novel in Bass Riddim | 4.5 | September | Book club: mixed reception; I really enjoyed the rhythmic chaos |
  | N.K. Jemisin | The Shadowed Sun | 4 | September | |
