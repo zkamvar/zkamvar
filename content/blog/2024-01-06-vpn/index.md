@@ -36,8 +36,10 @@ doing this, so I needed to do three things:
 1. Set up [OpenVPN for Ubuntu](https://support.vyprvpn.com/hc/en-us/articles/360037721812-VyprVPN-OpenVPN-Setup-for-Linux-Ubuntu-)
 2. Download [the OpenVPN configuration files for the VyprVPN servers](https://support.vyprvpn.com/hc/en-us/articles/360037721812-VyprVPN-OpenVPN-Setup-for-Linux-Ubuntu-)
 3. Write a script that would [disable IPv6][disable-ipv6] before turning on VPN.
-4. Check that my ipv6 is actually disabled by using <https://test-ipv6.com/> or
-   <https://ipleak.net/>.
+
+
+I also want to check that my ipv6 is actually disabled by using <https://test-ipv6.com/> or
+<https://ipleak.net/>.
 
 [disable-ipv6]: https://support.vyprvpn.com/hc/en-us/articles/360038553552-How-do-I-disable-IPv6-on-Linux-
 
@@ -88,11 +90,6 @@ vpn_off function () {
     fi
 }
 ```
-
-### Testing the Solution
-
-I can test
-
 
 ## Full Solution
 
