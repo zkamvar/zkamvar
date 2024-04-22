@@ -2,17 +2,17 @@
 title: The Carpentries Workbench
 subtitle: A re-imagining of The Carpentries Lesson Infrastructure that strips away the tooling from the content so lesson authors, maintainers, and contributors can focus on the information and not the formatting.
 categories:
-Infrastructure
+- Infrastructure
 weight: 10
 authors: Zhian N. Kamvar
 links:
-icon: door-open
+- icon: door-open
   icon_pack: fas
   name: website
   url: https://carpentries.github.io/workbench
 tags:
-Carpentries
-R
+- Carpentries
+- R
 ---
 
 The Carpentries Workbench is a trio of R packages that deploy, validate, and
