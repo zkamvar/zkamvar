@@ -13,7 +13,7 @@ sharing_image: "/img/mushie-smol.jpg"
 show_action_link: true
 show_social_links: true
 subtitle: |
-  Research Software Engineer (On Sabbatical)
+  Research Software Engineer @ The Reich Lab
 text_align_left: false
 title: Zhian N. Kamvar
 type: home

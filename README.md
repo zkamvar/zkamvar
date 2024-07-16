@@ -6,8 +6,6 @@ I am a recovering bioinformatician and Research Software Engineer, responsible f
 I have been developing R packages in the realms of population genetics, epidemiology, reproducible research, and publication since 2012. 
 I enjoy cats 🐈‍⬛, baking 🥖, mushroom hunting 🍄, bad horror movies 👻, and good speculative fiction 📚.  
 
-**I am on sabbatical and will be looking for work starting March 2024**
-
 Some of my projects include:
 
 - [{sandpaper}](https://carpentries.github.io/sandpaper): lesson engine for The Carpentries Workbench
