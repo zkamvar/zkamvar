@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=http://example.com">
+    <script type="text/javascript">
+      const today = new Date();
+      const lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
+      const to = today.toISOString().split("T")[0];
+      const from  = lastWeek.toISOString().split("T")[0];
+      window.location.href = "https://github.com/zkamvar?tab=overview&from="+from+"&to="+to+"#js-contribution-activity"
+    </script>
+    <title>Page Redirection</title>
+  </head>
+  <body>
+    <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
+    If you are not redirected automatically, follow this <a href='http://example.com'>link to example</a>.
+  </body>
+</html>
