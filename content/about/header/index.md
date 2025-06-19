@@ -6,9 +6,8 @@ headline: |
   Zhian N. Kamvar, Ph. D.
 ---
 
-I am a Research Software Engineer in [The Reich Lab](https://reichlab.io)
-woking to support users of [The Hubverse](https://hubverse.io), open tools for
-collaborative modelling.
+I am a Senior Software Engineer at [Recast Labs](https://getrecast.com)
+supporting a fanastic team of data scientists.
 I am the former Lesson Infrastructure Developer at [The
 Carpentries](https://carpentries.org/) and worked to make the Lesson
 Infrastructure a more accessible and friendly place to contribute. I’m trained
