@@ -52,6 +52,8 @@ use these themes, I had to be in the right mode.
 
 ## Random choice
 
+![Animated gif of a teminal window on a mac with the color scheme rotating when I switch between dark and light mode](/img/colors.gif)
+
 I wanted a way to randomly choose my colorscheme whenever I started my editor
 and I wanted that theme to respect the dark mode setting. Initially, I found
 [f-person/auto-dark-mode](https://github.com/f-person/auto-dark-mode.nvim),
